@@ -9,7 +9,8 @@ public class TryWithResources {
 
     public static void main(String[] args) {
 
-        try (CustomResource customResource = new CustomResource()) {
+        try (CustomResource customResource = new CustomResource();
+            NewCustomResource newCustomResource = new NewCustomResource()) {
             customResource.printMessage();
         } catch (Exception e) {
             e.printStackTrace();
