@@ -3,15 +3,15 @@ package src;
 public class CustomResource implements AutoCloseable {
 
     public CustomResource() {
-        System.out.println("CustomResource Constructor");
+        System.out.println(getClass().getName() + " Constructor");
     }
 
     public void printMessage() {
-        System.out.println("CustomResource Print Message");
+        System.out.println(getClass().getName() + " Print Message");
     }
 
     @Override
     public void close() throws Exception {
-        System.out.println("CustomResource close");
+        System.out.println(getClass().getName() + " close");
     }
 }
