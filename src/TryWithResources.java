@@ -9,11 +9,9 @@ public class TryWithResources {
 
     public static void main(String[] args) {
 
-        try (Scanner scanner = new Scanner(new File("input.txt"));
-            PrintWriter printWriter = new PrintWriter(new File("output.txt"))) {
-            System.out.println(scanner.nextLine());
-            printWriter.println("End");
-        } catch (FileNotFoundException e) {
+        try (CustomResource customResource = new CustomResource()) {
+            customResource.printMessage();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
