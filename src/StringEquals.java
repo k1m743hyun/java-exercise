@@ -1,3 +1,5 @@
+package src;
+
 class StringEquals {
   public static void main(String args[]) {
     //String input = "";
